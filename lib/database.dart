@@ -19,9 +19,9 @@ const List sample_data = [
   },
   {
     "id": 2,
-    "question": "2+2 is equal to?",
-    "options": ['1', '2', '3', '4'],
-    "answer_index": 3,
+    "question": "Which Programming language is used by Flutter?",
+    "options": ['Ruby', 'Kotlin', 'Dart', 'Java'],
+    "answer_index": 2,
   },
   {
     "id": 3,
@@ -31,9 +31,9 @@ const List sample_data = [
   },
   {
     "id": 4,
-    "question": " How many days are there in a week?",
-    "options": ['7', '6', '8', '5'],
-    "answer_index": 0,
+    "question": "Which is not a Blood Group?",
+    "options": ['O', 'C', 'B', 'AB'],
+    "answer_index": 1,
   },
   {
     "id": 5,

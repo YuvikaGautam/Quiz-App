@@ -28,7 +28,8 @@ environment:
 # versions available, run `flutter pub outdated`.
 dependencies:
   # flutter_native_splash: ^2.2.3+1
-
+  #  image: assets/images/LOGO.png
+  
   flutter:
     sdk: flutter
 

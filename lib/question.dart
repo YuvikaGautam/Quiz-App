@@ -21,6 +21,7 @@ class _QuestionPageState extends State<QuestionPage> {
   Color correct = Color.fromARGB(204, 181, 253, 181);
   int score = 0;
   int e = 0;
+  int q = 1;
   @override
   void initState() {
     _controller.start();
@@ -79,6 +80,7 @@ class _QuestionPageState extends State<QuestionPage> {
           );
         } else {
           e++;
+          q++;
         }
         baseColor1 = Color.fromARGB(204, 170, 217, 251);
         baseColor2 = Color.fromARGB(204, 170, 217, 251);
@@ -105,7 +107,7 @@ class _QuestionPageState extends State<QuestionPage> {
               children: [
                 CustomTimer(
                     controller: _controller,
-                    begin: const Duration(minutes: 1),
+                    begin: const Duration(minutes: 5),
                     end: Duration(),
                     builder: (time) {
                       return Text("${time.seconds}.${time.milliseconds}",
@@ -131,7 +133,7 @@ class _QuestionPageState extends State<QuestionPage> {
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           Text(
-                            'Q-$e',
+                            'Q-$q',
                             style: TextStyle(
                                 fontSize: 26,
                                 fontWeight: FontWeight.bold,
