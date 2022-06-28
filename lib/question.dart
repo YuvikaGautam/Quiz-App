@@ -107,10 +107,10 @@ class _QuestionPageState extends State<QuestionPage> {
               children: [
                 CustomTimer(
                     controller: _controller,
-                    begin: const Duration(minutes: 5),
+                    begin: const Duration(minutes: 2),
                     end: Duration(),
                     builder: (time) {
-                      return Text("${time.seconds}.${time.milliseconds}",
+                      return Text("${time.minutes}:${time.seconds}::${time.milliseconds}",
                           style: TextStyle(fontSize: 24.0));
                     }),
                 SizedBox(
