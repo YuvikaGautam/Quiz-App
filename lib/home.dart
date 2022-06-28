@@ -29,78 +29,68 @@ class Home extends StatelessWidget {
         ),
         Material(
           color: Colors.transparent,
-          child: SingleChildScrollView(
-            child: Column(
-              children: [
-                // Container(
-                //   height: MediaQuery.of(context).size.height * 0.3,
-                //   decoration: const BoxDecoration(
-                //     image: DecorationImage(
-                //         image: AssetImage('assets/images/LOGO.png'),
-                //         fit: BoxFit.cover),
-                //   ),
-                // ),
-                const SizedBox(height: 30),
-                Image.asset(
-                  'assets/images/LOGO.png',
-                  height: MediaQuery.of(context).size.height * 0.35,
-                ),
-                Text(
-                  "Let's Play Quiz",
-                  style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 40,
-                      fontWeight: FontWeight.bold,
-                      fontFamily: GoogleFonts.comfortaa().fontFamily),
-                ),
-                const SizedBox(height: 30),
-                Text(
-                  "Enter your name to start",
-                  style: TextStyle(
+          child: Column(
+            children: [
+              const SizedBox(height: 30),
+              Image.asset(
+                'assets/images/LOGO.png',
+                height: MediaQuery.of(context).size.height * 0.3,
+              ),
+              Text(
+                "Let's Play Quiz",
+                style: TextStyle(
                     color: Colors.white,
-                    fontSize: 18,
+                    fontSize: 36,
                     fontWeight: FontWeight.bold,
-                    fontFamily: GoogleFonts.lora().fontFamily,
-                  ),
+                    fontFamily: GoogleFonts.comfortaa().fontFamily),
+              ),
+              const SizedBox(height: 30),
+              Text(
+                "Enter your name to start",
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 15,
+                  fontWeight: FontWeight.bold,
+                  fontFamily: GoogleFonts.lora().fontFamily,
                 ),
-                const SizedBox(height: 30),
-                Form(
-                  key: _formKey,
-                  child: TextFormField(
-                      controller: _nameController,
-                      validator: nameValidator,
-                      style: TextStyle(color: Colors.black),
-                      decoration: InputDecoration(
-                        filled: true,
-                        fillColor: Colors.white,
-                        hintText: "Full Name",
-                        hintStyle: TextStyle(
-                          color: Colors.grey,
+              ),
+              const SizedBox(height: 25),
+              Form(
+                key: _formKey,
+                child: TextFormField(
+                    controller: _nameController,
+                    validator: nameValidator,
+                    style: TextStyle(color: Colors.black),
+                    decoration: InputDecoration(
+                      filled: true,
+                      fillColor: Colors.white,
+                      hintText: "Full Name",
+                      hintStyle: TextStyle(
+                        color: Colors.grey,
+                      ),
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(12)),
+                      ),
+                    )),
+              ),
+              const SizedBox(height: 40),
+              ElevatedButton.icon(
+                  onPressed: () {
+                    var status = _formKey.currentState?.validate();
+                    if (status != null && status) {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => QuestionPage(),
                         ),
-                        border: OutlineInputBorder(
-                          borderRadius: BorderRadius.all(Radius.circular(12)),
-                        ),
-                      )),
-                ),
-                const SizedBox(height: 50),
-                ElevatedButton.icon(
-                    onPressed: () {
-                      var status = _formKey.currentState?.validate();
-                      if (status != null && status) {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => QuestionPage(),
-                          ),
-                        ).then((_) => _formKey.currentState!.reset());
-                      }
-                    },
-                    style: ElevatedButton.styleFrom(
-                        primary: Color.fromARGB(204, 155, 205, 240)),
-                    icon: Icon(Icons.arrow_forward),
-                    label: Text("Start")),
-              ],
-            ),
+                      ).then((_) => _formKey.currentState!.reset());
+                    }
+                  },
+                  style: ElevatedButton.styleFrom(
+                      primary: Color.fromARGB(204, 155, 205, 240)),
+                  icon: Icon(Icons.arrow_forward),
+                  label: Text("Start")),
+            ],
           ),
         ),
       ],

@@ -30,7 +30,7 @@ class _QuestionPageState extends State<QuestionPage> {
 
   @override
   void changeColor(int check) {
-    if (check == sample_data[e]['answer_index'] && check == 0) {
+    if (sample_data[e]['answer_index'] == 0) {
       setState(() {
         baseColor1 = correct;
         baseColor2 = wrong;
@@ -40,7 +40,7 @@ class _QuestionPageState extends State<QuestionPage> {
           score = score + 10;
         }
       });
-    } else if (check == sample_data[e]['answer_index'] && check == 1) {
+    } else if (sample_data[e]['answer_index'] == 1) {
       setState(() {
         baseColor1 = wrong;
         baseColor2 = correct;
@@ -50,7 +50,7 @@ class _QuestionPageState extends State<QuestionPage> {
           score = score + 10;
         }
       });
-    } else if (check == sample_data[e]['answer_index'] && check == 2) {
+    } else if (sample_data[e]['answer_index'] == 2) {
       setState(() {
         baseColor1 = wrong;
         baseColor2 = wrong;
@@ -60,7 +60,7 @@ class _QuestionPageState extends State<QuestionPage> {
           score = score + 10;
         }
       });
-    } else if (check == sample_data[e]['answer_index'] && check == 3) {
+    } else if (sample_data[e]['answer_index'] == 3) {
       setState(() {
         baseColor1 = wrong;
         baseColor2 = wrong;
@@ -159,9 +159,9 @@ class _QuestionPageState extends State<QuestionPage> {
                     SizedBox(height: 50),
                     ElevatedButton(
                         onPressed: () {
-                          setState(() {
+                          
                             changeColor(0);
-                          });
+                       
                         },
                         style: ElevatedButton.styleFrom(
                             fixedSize: Size(380, 60), primary: baseColor1),
@@ -184,9 +184,9 @@ class _QuestionPageState extends State<QuestionPage> {
                     SizedBox(height: 10),
                     ElevatedButton(
                         onPressed: () {
-                          setState(() {
+                          
                             changeColor(1);
-                          });
+                       
                         },
                         style: ElevatedButton.styleFrom(
                             fixedSize: Size(380, 60), primary: baseColor2),
@@ -209,9 +209,9 @@ class _QuestionPageState extends State<QuestionPage> {
                     SizedBox(height: 10),
                     ElevatedButton(
                         onPressed: () {
-                          setState(() {
+                          
                             changeColor(2);
-                          });
+                        
                         },
                         style: ElevatedButton.styleFrom(
                             fixedSize: Size(380, 60), primary: baseColor3),
@@ -234,9 +234,9 @@ class _QuestionPageState extends State<QuestionPage> {
                     SizedBox(height: 10),
                     ElevatedButton(
                         onPressed: () {
-                          setState(() {
+                         
                             changeColor(3);
-                          });
+                       
                         },
                         style: ElevatedButton.styleFrom(
                             fixedSize: Size(380, 60), primary: baseColor4),
