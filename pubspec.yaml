@@ -30,6 +30,8 @@ dependencies:
   # flutter_native_splash: ^2.2.3+1
   #  image: assets/images/LOGO.png
   
+  flutter_native_splash: ^2.2.3+1
+
   flutter:
     sdk: flutter
 
@@ -41,7 +43,7 @@ dependencies:
   flutter_svg_provider: ^1.0.3
   google_fonts: ^3.0.1
   custom_timer: ^0.1.1
-
+  
 dev_dependencies:
   
   flutter_test:
@@ -70,7 +72,9 @@ flutter:
   assets:
     - assets/images/
   #   - images/a_dot_ham.jpeg
-
+flutter_native_splash:
+    image: assets/images/LOGO.png
+    color: "#ffffff"
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 
