@@ -25,8 +25,8 @@ const List sample_data = [
   },
   {
     "id": 3,
-    "question": "what is our national flower?",
-    "options": ['lily', 'Sunflower', 'Rose', 'Lotus'],
+    "question": "Which is our National Flower?",
+    "options": ['Lily', 'Sunflower', 'Rose', 'Lotus'],
     "answer_index": 3,
   },
   {
@@ -37,7 +37,7 @@ const List sample_data = [
   },
   {
     "id": 5,
-    "question": " What is the capital of India?",
+    "question": " What is the Capital of India?",
     "options": ['Mumbai', 'Bangalore', 'New Delhi', 'Chennai'],
     "answer_index": 2,
   },
